@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timeline Service</title>
+    <title>고양이 확성기</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
@@ -54,7 +54,9 @@
             width: 100%;
             height: 428px;
             background-color: fuchsia;
+            /*background-image: url("images/cat_main.png");*/
         }
+
 
         .background-body {
             position: fixed;
@@ -100,6 +102,12 @@
             letter-spacing: -1.12px;
             text-align: center;
             color: #ffffff;
+        }
+
+        #into {
+            text-align: center;
+            color: #ffffff;
+            font-weight: bold;
         }
 
         textarea.field {
@@ -343,10 +351,10 @@
             <img id="${id}-delete" class="icon-delete" src="images/delete.png" alt="" onclick="deleteOne('${id}')">
             <img id="${id}-submit" class="icon-end-edit" src="images/done.png" alt="" onclick="submitEdit('${id}')">
         </div>
-    </div>`;
+    </div>`
             // 2. #cards-box 에 HTML을 붙인다.
             $('#cards-box').append(tempHtml);
-        }
+        };
 
             // 메모를 생성합니다.
             function writePost() {
@@ -504,19 +512,25 @@
 
 <body onload="showClock()">
 <div class="background-header">
+<!--    <img id="catmain" src="images/cat_main.png">-->
 
 </div>
 <div class="background-body">
+<!--    <img src="images/cat_main.png">-->
 
 </div>
 <div class="wrap">
     <div class="header">
-        <h2>제목이 들어갈 공간임</h2>
+        <h2>고양이 확성기</h2>
         <h3 id="divClock" class="clock"></h3>
-        <p>
-            설명이 들어갈 공간임
-        </p>
+
     </div>
+    <p id="into">
+        나만 알고 있는 비밀을 공유해봐요.<br>
+        24시간이 지나면 자동으로 삭제가 돼요.<br>
+        누구나 수정할 수 있고<br>
+        누구나 삭제할 수 있어요.<br>
+    </p>
     <div class="area-write">
         <textarea class="field" placeholder="소문내고 싶은 이야기를 적어주세요" name="contents" id="contents" cols="30"
                   rows="10"></textarea>
